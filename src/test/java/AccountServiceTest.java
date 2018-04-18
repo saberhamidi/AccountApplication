@@ -15,4 +15,10 @@ public class AccountServiceTest {
         service.addAccount(account);
         assertEquals("Saber", service.getAccountByName("Saber").getFirstName());
     }
+
+    @org.junit.Test
+    public void paraseToJsonTest() {
+        service.addAccount(account);
+        assertEquals(true, service.parseToJson());
+    }
 }
