@@ -1,3 +1,5 @@
+package com.infosys.domain;
+
 public class Account {
 
     private String firstName;
