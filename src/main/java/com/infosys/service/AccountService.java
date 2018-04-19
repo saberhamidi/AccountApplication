@@ -35,6 +35,17 @@ public class AccountService {
         }
     }
 
+    public int getNumberOfAccountsWithFirstName(String firstName){
+        int count = 0;
+
+        for (Map.Entry hashElement : accounts.entrySet()) {
+            if (hashElement.getKey().equals(firstName)){
+                count++;
+            }
+        }
+        return count;
+    }
+
     public Map<String, Account> getAccounts() {
         return accounts;
     }
