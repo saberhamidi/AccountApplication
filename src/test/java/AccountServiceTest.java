@@ -67,4 +67,12 @@ public class AccountServiceTest {
         assertEquals(1, testAccounts.size());
     }
 
+    @org.junit.Test
+    public void getNumberOfAccountsWithFirstNameTest() {
+        assertEquals(0, accountService.getNumberOfAccountsWithFirstName("Saber"));
+        accountService.addAccount(myAccount);
+        assertEquals(1, accountService.getNumberOfAccountsWithFirstName("Saber"));
+        accountService.addAccount(new Account("Saber", "Hamidi", 399752345));
+    }
+
 }
